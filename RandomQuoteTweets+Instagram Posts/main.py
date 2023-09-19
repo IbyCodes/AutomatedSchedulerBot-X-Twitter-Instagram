@@ -104,30 +104,34 @@ def post_scheduled_quote():
                 # Logging out from your account
                 bot.logout()
 
-        '''''
+        
         # Deleting the "config" folder thats created from the instagram post
         # I've added this code to the main code as there will be times where the instagram account refuses to post another image until both the 'config' folder and 
         # the 'temp_file_name.REMOVE_ME' files are removed from the directory
-         
+        # (This is a bit buggy at the moment)
+        # Temporary solution is to just end the script once tweet+instagram post have been made, delete these two files, then restart script. 
+            ''''
+            time.sleep(5)
             config_folder = 'config'
             temp_file_name = 'temp_image.jpg.REMOVE_ME'
             if os.path.exists(config_folder):
                 shutil.rmtree(config_folder)
                 print("Removed config folder")
             
+            time.sleep(5)
             if os.path.exists(temp_file_name):
                 os.remove(temp_file_name)
                 print("Removed temp_image.jpg.REMOVE_ME file")
-        '''    
+           '''
     else:
         print(f"Failed to retrieve an image/quote correctly. Status code: {image_response.status_code}")
 
 
 
 # Scheduling the post to be uploaded to both Instagram and X/Twitter every day at ____ PM (System is a 24 H Clock)
-schedule.every().day.at("18:57").do(post_scheduled_quote)
+schedule.every().day.at("17:26").do(post_scheduled_quote)
 
-# Keeping the script running (If you wanted to post every day, it will require the script to run at all times. Make sure to deal with instagram config files as required!)
+# Keeping the script running (If you wanted to post every day, it will require the script to run at all times. However, make sure to deal with instagram config files as required! Instabot is very buggy with this) 
 while True:
     schedule.run_pending()
     time.sleep(1)
