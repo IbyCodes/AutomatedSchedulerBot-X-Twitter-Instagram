@@ -126,7 +126,7 @@ def post_scheduled_quote():
     else:
         print(f"Failed to retrieve an image/quote correctly. Status code: {image_response.status_code}")
 
-
+post_scheduled_quote() # for now, im going to set it so that every time I run this script it automatically posts right away. Of course, you can comment this out if you wish to schedule it.
 
 # Scheduling the post to be uploaded to both Instagram and X/Twitter every day at ____ PM (System is a 24 H Clock)
 schedule.every().day.at("17:26").do(post_scheduled_quote)
