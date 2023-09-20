@@ -8,3 +8,9 @@ https://pprathameshmore.github.io/QuoteGarden/
 
 Lorem Picsum:
 https://picsum.photos/
+
+
+Created by Mohammad Ibrahim Khan 
+IbyCodes
+
+
