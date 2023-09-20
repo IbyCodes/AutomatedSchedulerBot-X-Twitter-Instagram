@@ -10,7 +10,7 @@ Lorem Picsum:
 https://picsum.photos/
 
 
-Created by Mohammad Ibrahim Khan /n 
+Created by Mohammad Ibrahim Khan\ 
 IbyCodes
 
 
