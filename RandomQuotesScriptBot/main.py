@@ -4,7 +4,7 @@ import shutil
 
 python_interpreter = 'python' # you may need to name this python3, depends on your personal configuration
 
-script_path = 'C:\\Users\\ibrah\\OneDrive\\Desktop\\RandomQuoteTweets+Instagram Posts\\script.py' 
+script_path = '' 
 # this will depend on where exactly your script.py file is located, provided to you by me in this folder
 # Ex: C:\\Users\\ibrah\\OneDrive\\Desktop\\RandomQuoteTweets+Instagram Posts\\script.py
 
